@@ -6,19 +6,20 @@
 int* array_merge(int num_arrays,int* sizes, int** values){
 	
 	int fSize = 0;
-	int index = 0;
-	int* temp = (int*) calloc(fSize, sizeof(int));
 	int* result;
 
 	for (int i = 0; i < num_arrays; i++){
 		fSize += sizes[i];
-	}
-
-	for (int n = 0; n < sizes[j]; n++){
-		temp[index] = values[j][n];
-		index++;
-	}
 }
+	int* temp = (int*) calloc(fSize, sizeof(int));
+	int index = 0;
+
+	for (int j = 0; j < num_arrays; j++){
+		for (int k = 0; k < sizes[j]; k++){
+			temp[index] = values[j][k];
+			index++;
+		}
+	}
 
 	mergesort(fSize, temp);
 	
